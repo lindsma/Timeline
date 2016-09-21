@@ -1,3 +1,49 @@
+*, *:after, *:before {
+  box-sizing: border-box; }
 
+body {
+  font-family: "avenir"; }
+
+div.container {
+  background: red;
+  height: 400px;
+  width: 75%; }
+
+ul.items-list {
+  background: green; }
+  ul.items-list li.item-container {
+    background: #333; }
+    ul.items-list li.item-container div.date-time {
+      background: yellow; }
+      ul.items-list li.item-container div.date-time p {
+        color: #D3D3D3; }
+      ul.items-list li.item-container div.date-time h4 {
+        font-size: 40px;
+        font-weight: bold;
+        color: #6CBFEE; }
+    ul.items-list li.item-container div.item-icon {
+      background: #3594CB;
+      color: #fff;
+      border-radius: 50%;
+      width: 5%;
+      border: 7px solid #AFDCF8; }
+      ul.items-list li.item-container div.item-icon i.fa {
+        font-size: 34px;
+        margin-left: 28%; }
+    ul.items-list li.item-container div.item-content {
+      color: #fff;
+      background: #6CBFEE;
+      width: 80%;
+      padding: 30px 30px 40px 30px;
+      border-radius: 5px; }
+      ul.items-list li.item-container div.item-content h3 {
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 0;
+        padding-bottom: 15px;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.5); }
+      ul.items-list li.item-container div.item-content p {
+        padding-top: 15px;
+        line-height: 1.4em; }
 
 /*# sourceMappingURL=main.css.map */
