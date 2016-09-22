@@ -1,0 +1,19 @@
+@include media(mobile) {
+  
+    div.date-time {
+        float: none;
+        display: block;
+    }
+}
+
+@include media(tablet) {
+    div.container {
+        width: 98%;
+    }
+}
+
+@include media(desktop) {
+    div.container {
+        width: 98%;
+    }
+}

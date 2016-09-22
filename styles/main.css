@@ -1,41 +1,63 @@
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   box-sizing: border-box; }
 
 body {
   font-family: "avenir"; }
 
 div.container {
-  background: red;
-  height: 400px;
-  width: 75%; }
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  transition: width 1.5s ease; }
 
 ul.items-list {
-  background: green; }
+  background: green;
+  height: 100%; }
   ul.items-list li.item-container {
-    background: #333; }
+    background: #333;
+    height: 100%; }
     ul.items-list li.item-container div.date-time {
-      background: yellow; }
+      background: #fff;
+      width: 15%;
+      float: left;
+      text-align: right;
+      margin-top: 40px; }
       ul.items-list li.item-container div.date-time p {
         color: #D3D3D3; }
       ul.items-list li.item-container div.date-time h4 {
         font-size: 40px;
         font-weight: bold;
-        color: #6CBFEE; }
-    ul.items-list li.item-container div.item-icon {
-      background: #3594CB;
-      color: #fff;
-      border-radius: 50%;
-      width: 5%;
-      border: 7px solid #AFDCF8; }
-      ul.items-list li.item-container div.item-icon i.fa {
-        font-size: 34px;
-        margin-left: 28%; }
+        color: #6CBFEE;
+        padding-right: 1px; }
+        ul.items-list li.item-container div.date-time h4.greens {
+          color: #3594CB; }
     ul.items-list li.item-container div.item-content {
       color: #fff;
       background: #6CBFEE;
-      width: 80%;
-      padding: 30px 30px 40px 30px;
-      border-radius: 5px; }
+      width: 70%;
+      padding: 30px 30px 40px;
+      border-radius: 5px;
+      float: left;
+      margin-left: 10%;
+      position: relative;
+      margin-top: 40px; }
+      ul.items-list li.item-container div.item-content.greens {
+        background: #3594CB; }
+      ul.items-list li.item-container div.item-content div.triangle {
+        position: absolute;
+        top: 8px;
+        left: -9px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 10px 8px 0;
+        border-color: transparent #6CBFEE transparent transparent; }
+        ul.items-list li.item-container div.item-content div.triangle.greens {
+          border-color: transparent #3594CB transparent transparent; }
       ul.items-list li.item-container div.item-content h3 {
         font-size: 28px;
         font-weight: bold;
@@ -45,5 +67,47 @@ ul.items-list {
       ul.items-list li.item-container div.item-content p {
         padding-top: 15px;
         line-height: 1.4em; }
+
+div.timeline {
+  height: 100%;
+  background: #AFDCF8;
+  width: 10px;
+  float: left;
+  position: absolute;
+  top: 8%;
+  left: 17%;
+  margin: 0 20px; }
+
+div.item-icon {
+  float: left;
+  position: absolute; }
+  div.item-icon.mobile {
+    top: 6%;
+    left: 17%; }
+  div.item-icon.desktop {
+    left: 17%;
+    top: 66%; }
+  div.item-icon i.fa {
+    color: #fff;
+    border-radius: 50%;
+    border: 7px solid #AFDCF8;
+    background: #3594CB; }
+    div.item-icon i.fa.fa-mobile {
+      padding: 0 10px;
+      font-size: 34px; }
+    div.item-icon i.fa.fa-desktop {
+      font-size: 22px;
+      padding: 6px 5px 4px; }
+
+@media only screen and (max-width: 480px) {
+  div.date-time {
+    float: none;
+    display: block; } }
+@media only screen and (max-width: 768px) {
+  div.container {
+    width: 98%; } }
+@media only screen and (max-width: 1024px) {
+  div.container {
+    width: 98%; } }
 
 /*# sourceMappingURL=main.css.map */

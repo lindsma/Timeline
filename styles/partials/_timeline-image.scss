@@ -1,0 +1,42 @@
+div.timeline {
+    height: 100%;
+    background: $timelinecolor;
+    width: 10px;
+    float: left;
+    position: $abs;
+    top: 8%;
+    left: 17%;
+    margin: 0 20px;
+}
+
+div.item-icon {
+    float: left;
+    position: $abs;
+
+    &.mobile {
+        top: 6%;
+        left: 17%;
+    }
+
+    &.desktop {
+        left: 17%;
+        top: 66%;
+    }
+
+    i.fa {
+        color: $textcolor;
+        border-radius: 50%;
+        border: 7px solid $timelinecolor;
+        background: #3594CB;
+
+        &.fa-mobile {
+            padding: 0 10px;
+            font-size: 34px;
+        }
+
+        &.fa-desktop {
+            font-size: 22px;
+            padding: 6px 5px 4px;
+        }
+    }
+}

@@ -1,69 +1,89 @@
 body {
-  font-family: "avenir";
+    font-family: "avenir";
 }
 
-$color: #fff;
-
 div.container {
-  background: red;
-  height: 400px;
-  width: 75%;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: $rel;
+    transition: width 1.5s ease;
 }
 
 ul.items-list {
-  background: green;
+    background: green;
+    height: 100%;
 
-  li.item-container {
-    background: #333;
+    li.item-container {
+        background: #333;
+        height: 100%;
 
-    div.date-time {
-      background: yellow;
+        div.date-time {
+            background: #fff;
+            width: 15%;
+            float: left;
+            text-align: right;
+            margin-top: 40px;
 
-      p {
-      color: #D3D3D3;
-      }
+            p {
+                color: #D3D3D3;
+            }
 
-      h4 {
-        font-size: 40px;
-        font-weight: bold;
-        color: #6CBFEE;
-      }
+            h4 {
+                font-size: 40px;
+                font-weight: bold;
+                color: #6CBFEE;
+                padding-right: 1px;
 
+                &.greens {
+                    color: #3594CB;
+                }
+            }
+        }
+
+        div.item-content {
+            color: $textcolor;
+            background: #6CBFEE;
+            width: 70%;
+            padding: 30px 30px 40px;
+            border-radius: 5px;
+            float: left;
+            margin-left: 10%;
+            position: $rel;
+            margin-top: 40px;
+
+            &.greens {
+                background: #3594CB;
+            }
+
+            div.triangle {
+                position: $abs;
+                top: 8px;
+                left: -9px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 8px 10px 8px 0;
+                border-color: transparent #6CBFEE transparent transparent;
+
+                &.greens {
+                    border-color: transparent #3594CB transparent transparent;
+                }
+            }
+
+            h3 {
+                font-size: 28px;
+                font-weight: bold;
+                letter-spacing: 0;
+                padding-bottom: 15px;
+                border-bottom: 0.5px solid rgba(255, 255, 255, .5);
+            }
+
+            p {
+                padding-top: 15px;
+                line-height: 1.4em;
+            }
+        }
     }
-
-    div.item-icon {
-      background: #3594CB;
-      color: $color;
-      border-radius: 50%;
-      width: 5%;
-      border: 7px solid #AFDCF8;
-
-      i.fa {
-        font-size: 34px;
-        margin-left: 28%;
-      }
-    }
-
-    div.item-content {
-      color: $color;
-      background: #6CBFEE;
-      width: 80%;
-      padding: 30px 30px 40px 30px;
-      border-radius: 5px;
-
-      h3 {
-        font-size: 28px;
-        font-weight: bold;
-        letter-spacing: 0;
-        padding-bottom: 15px;
-        border-bottom: .5px solid rgba(255, 255, 255, .5);
-      }
-      p {
-        padding-top: 15px;
-        line-height: 1.4em;
-
-      }
-    }
-  }
-
 }

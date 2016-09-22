@@ -1,7 +1,13 @@
-*, *:after, *:before {
-  box-sizing: border-box;
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
 }
-
+$textcolor: #fff;
+$timelinecolor: #AFDCF8;
+$abs: absolute;
+$rel: relative;
+@import "partials/mixins";
 @import "partials/body";
 @import "partials/timeline-image";
-@import "partials/mixins";
+@import "partials/media-queries";
