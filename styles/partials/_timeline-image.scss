@@ -7,6 +7,19 @@ div.timeline {
     top: 8%;
     left: 17%;
     margin: 0 20px;
+    transition: left 1.5s ease;
+
+    @include media(tablet) {
+      left: 13%;
+    }
+
+    @include media(tablet2) {
+      left: 14%;
+    }
+
+    @include media(mobile) {
+      left: 5%;
+    }
 }
 
 div.item-icon {
@@ -16,11 +29,37 @@ div.item-icon {
     &.mobile {
         top: 6%;
         left: 17%;
+        transition: left 1.5s ease;
+
+        @include media(tablet) {
+          left: 13%;
+        }
+
+        @include media(tablet2) {
+          left: 14%;
+        }
+
+        @include media(mobile) {
+          left: 5%;
+        }
     }
 
     &.desktop {
         left: 17%;
         top: 66%;
+        transition: left 1.5s ease;
+
+        @include media(tablet) {
+          left: 13%;
+        }
+
+        @include media(tablet2) {
+          left: 14%;
+        }
+
+        @include media(mobile) {
+          left: 5%;
+        }
     }
 
     i.fa {

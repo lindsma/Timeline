@@ -9,15 +9,22 @@ div.container {
     overflow: hidden;
     position: $rel;
     transition: width 1.5s ease;
+
+    @include media(desktop) {
+            width: 98%;
+    }
+
+    @include media(mobile) {
+            width: 100%;
+    }
 }
 
 ul.items-list {
-    background: green;
     height: 100%;
 
     li.item-container {
-        background: #333;
-        height: 100%;
+      float: left;
+        // height: 100%;
 
         div.date-time {
             background: #fff;
@@ -26,8 +33,20 @@ ul.items-list {
             text-align: right;
             margin-top: 40px;
 
+            @include media(mobile) {
+                    float: none;
+                    display: block;
+                    margin: 10px auto;
+            }
+
+            @include media(tablet) {
+                text-align: left;
+            }
+
+
             p {
                 color: #D3D3D3;
+
             }
 
             h4 {
@@ -35,6 +54,15 @@ ul.items-list {
                 font-weight: bold;
                 color: #6CBFEE;
                 padding-right: 1px;
+                transition: font-size 1.5s ease;
+
+                @include media(tablet) {
+                    font-size: 30px;
+                }
+
+                @include media(tablet) {
+                    font-size: 25px;
+                }
 
                 &.greens {
                     color: #3594CB;
@@ -52,6 +80,17 @@ ul.items-list {
             margin-left: 10%;
             position: $rel;
             margin-top: 40px;
+
+            @include media(mobile) {
+              margin-left: 25%;
+              margin-top: 0;
+            }
+
+            &:first-of-type{
+              @include media(mobile) {
+                margin-bottom: 10px;
+              }
+            }
 
             &.greens {
                 background: #3594CB;
